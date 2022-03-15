@@ -1,0 +1,57 @@
+<!--DOM or Dom tree is the data structure (document object model)
+that the browswer will create when it is loading up a page.
+-->
+
+<!--Based on the html tags and contents
+Each tag is a separate node-->
+
+<!--DOM is an OOP representation of the webpage, which can be modified 
+using javascript-->
+
+<!--The window object defines the size of the window, not that imp-->
+
+<!--Events is something a user or browser does
+Like clicking or typing something
+Most connected with event.target
+Like clicking and the slide changes-->
+<!--Examples
+.addEventListener
+when .addEventListener("click,function (event) {
+    alert('You clicked on ${event.target.innerText}'');
+}-->
+
+<style>
+    .red-square {
+      width: 100px;
+      height: 100px;
+      background-color: crimson;
+    }
+  </style>
+  
+  <div class="red-square"></div>
+  
+  <script>
+    const redSquare = document.querySelector('.red-square');
+    redSquare.style.backgroundColor = 'limegreen';
+  </script>
+
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <h2>Header</h2>
+        <p id="demo"></p>
+    
+        <!--Tab key auto completes for you-->
+        <!--For classes with the same name need to index
+        Ex. document.getElementsbyClassName("description")[1].innerHTML="descript"-->
+        <script>
+            document.getElementById("demo").innerHTML = "Hello World"
+        </script>
+    </body>
+
+
+
+</html>
