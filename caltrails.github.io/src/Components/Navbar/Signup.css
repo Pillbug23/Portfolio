@@ -1,0 +1,87 @@
+.Signup {
+    background-image: linear-gradient(to right, #ff512f, #f09819);
+    height: 918px;
+    width: 100%;
+    display: flex;
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+  }
+
+.Sign {
+    height: 808px;
+    width: 480px;
+    background: white;
+    max-width: 580px;
+    padding: 30px;
+    box-shadow: 0 8px 16px 0 rgb(0 0 0 / 24%), 0 0 8px 0 rgb(0 0 0 / 8%);
+    border-radius: 16px;
+    box-sizing: border-box;  
+}
+
+.photo {
+    font-family:monteserrat,sans-serif;
+    color: black;
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 24px;
+    font-weight: 600;
+    font-family:Proxima Nova,Arial,sans-serif;;
+}
+
+.label {
+  left: 2%;
+  display: flex;
+  margin: 0 0 0 0;
+}
+
+.first,
+.last,
+.email,
+.password {
+  margin: 10px;
+  color: #969292;
+  font-size: 20px;
+}
+
+.input {
+  height: 32px;
+  font-size: 20px;
+  outline: none;
+  width: 100%;
+  border-top-style: none;
+  border-left-style: none;
+  border-right-style: none;
+  border-bottom-style: 2px solid black;
+  margin-bottom: 12px;
+}
+
+.error {
+  color: red;
+}
+
+.submit {
+  display: flex;
+  font-size: 20px;
+  border-radius: 25px;
+  color: white;
+  padding: 12px 60px;
+  background: black;
+  box-shadow: rgba(0,0,0,0.3) 0px 19px 38px rgba(0,0,0,0.22) 0px 15px 12px;
+  margin: auto;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.1s;
+}
+
+.timeAgo {
+  margin-top: 10px;
+}
+.fixe {
+  padding-top: 30px;
+  font-size: 16px;
+  color: #00ff0d;
+  line-height: 24px;
+  text-align: center;
+}
