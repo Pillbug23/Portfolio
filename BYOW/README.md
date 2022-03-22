@@ -1,5 +1,4 @@
-# caltrails.github.io
-[Demo](https://pillbug23.github.io/caltrails.github.io/)
+# Flower Power (BYOW)
 
 A simple web application that allows users to search for hiking trails near their location made with React.js. Auth0 framework allows unique authentication of login and access to user profile information. This projects uses the Google Maps API, TrailAPI, and weatherAPI; extraction of hiking trail data based on user's location. User can favorite hikes and view saved trails. 
 
@@ -53,23 +52,15 @@ npm run deploy
 
 ```
 # Clone this repository
-git clone https://github.com/Pillbug23/caltrails.github.io
+git clone 
 
 # Go into the repository
-cd caltrails.github.io
+cd BYOW
 
 # Remove current origin repository
 git remove remove origin
 ```
 
-Install dependencies
-```
-# Install dependencies
-npm install
-
-# Start development server
-npm start
-```
 
 
 
