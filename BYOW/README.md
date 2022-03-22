@@ -1,60 +1,24 @@
 # Flower Power (BYOW)
 
-A simple web application that allows users to search for hiking trails near their location made with React.js. Auth0 framework allows unique authentication of login and access to user profile information. This projects uses the Google Maps API, TrailAPI, and weatherAPI; extraction of hiking trail data based on user's location. User can favorite hikes and view saved trails. 
+A simple 2D tile-based world exploration engine made with Java. The world consists of a 2D grid of tiles. The user is able to explore the map by walking around with the keyboard and interacting with the objects in this world. The world consists of rooms (of differing lengths and sizes), connected by hallways(the paths used to connect rooms and enable us to travel between them). The user is able to move around with the keyboard (WASD keys) and interact with objects. The main objective of this game is to collect 10 flowers. 
 
-To access backend open a git terminal and navigate to the server directory. 
-```
-cd server
-node server.js
-```
 
-You should be able to see information logged when you favorite hikes in the explore page and see login information from the signup page.
+# Packages
 
-# Technologies 
-
-* Frontend: Javascript frameworks(React,MaterialUI)
-* Backend: Nodejs, MongoDB
-* [Google Maps API](https://www.npmjs.com/package/google-map-react)
-* [Trail/Weather API data](https://rapidapi.com/)
-* Axios
-# Deployment
-
-Deployed with GitHub Pages. [Link](https://dev.to/yuribenjamin/how-to-deploy-react-app-in-github-pages-2a1f)
-
-Simple guide to install GitHub Pages package as a dev-dependency.
-
-```
-cd {yourappname}
-npm install gh-pages --save-dev
-```
-
-Add properties to package.json file.
-```
-# Add the homepage attribute where the value is the "http://{username}.github.io/{repo-name}"
-"homepage": "http://{yourname}.github.io/{appname}"
-```
-
-Add predeploy and deploy to scripts
-```
-"scripts": {
-//...
-"predeploy": "npm run build",
-"deploy": "gh-pages -d build"
-}
-```
-
-Deploy
-```
-npm run deploy
-```
+* RandomUtils.java - Collection of random utility methods to generate the randomness of my program
+* Engine.java - Allows us to interact with system
+* Tileset.java - library of different tiles to form world
+* TETile.java - used to identify the type of tile
+* TERenderer.java - used to render tiles
 
 # Get Started
 
 ```
 # Clone this repository
-git clone 
+git clone Portfolio
 
 # Go into the repository
+cd Portfolio
 cd BYOW
 
 # Remove current origin repository
