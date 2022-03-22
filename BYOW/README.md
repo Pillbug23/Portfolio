@@ -2,8 +2,15 @@
 
 A simple 2D tile-based world exploration engine made with Java. The world consists of a 2D grid of tiles. The user is able to explore the map by walking around with the keyboard and interacting with the objects in this world. The world consists of rooms (of differing lengths and sizes), connected by hallways(the paths used to connect rooms and enable us to travel between them). The user is able to move around with the keyboard (WASD keys) and interact with objects. The main objective of this game is to collect 10 flowers. 
 
-<a href="/gif/-NB_6bL" title=""><img src="https://i.makeagif.com/media/3-22-2022/NB_6bL.gif" alt="">
+<a href="/gif/-U4w4w8" title=""><img src="https://i.makeagif.com/media/3-22-2022/U4w4w8.gif" alt="">
 
+# To Play
+  
+```
+# Open up a text editor(Intellij is preferred) and locate Main.java from byow/Core
+# Run Main.java
+```
+  
 # Packages
 
 * RandomUtils.java - Collection of random utility methods to generate the randomness of my program
