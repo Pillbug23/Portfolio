@@ -13,7 +13,7 @@ You should be able to see information logged when you favorite hikes in the expl
 
 # Technologies 
 
-* Frontend: Javascript frameworks(React,MaterialUI)
+* Frontend: Javascript frameworks(React,MaterialUI,Typography,Grid,AwesomeButton,FaIcons)
 * Backend: Nodejs, MongoDB
 * [Google Maps API](https://www.npmjs.com/package/google-map-react)
 * [Trail/Weather API data](https://rapidapi.com/)
