@@ -59,7 +59,7 @@ git clone https://github.com/Pillbug23/caltrails.github.io
 cd caltrails.github.io
 
 # Remove current origin repository
-git remove remove origin
+git remote rm origin
 ```
 
 Install dependencies
