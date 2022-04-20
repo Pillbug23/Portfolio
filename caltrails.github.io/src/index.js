@@ -12,8 +12,8 @@ console.log({clientIde})
 
 ReactDOM.render(
   <Auth0Provider
-    domain="dev-ylrt4uen.us.auth0.com"
-    clientId="oQ1tGopqjYqRYJrSxUZdgU5SbNuNfTmJ"
+    domain={domaine}
+    clientId={clientIde}
     redirectUri={'https://pillbug23.github.io/caltrails.github.io/'}
   >
     <App />

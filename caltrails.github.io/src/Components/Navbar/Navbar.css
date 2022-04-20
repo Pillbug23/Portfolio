@@ -22,10 +22,6 @@
   display: flex;
   position: relative;
   float: none;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
   width: auto;
 }
 
@@ -33,10 +29,9 @@
   display: flex;
   position: relative;
   float: none;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 885px;
+  top: 2px;
+  left: 850px;
+  margin-right: -40px;
   width: auto;
 }
 

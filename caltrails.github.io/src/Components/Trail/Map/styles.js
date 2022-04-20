@@ -5,7 +5,7 @@ export default makeStyles(() => ({
     padding: '10px', display: 'flex', flexDirection: 'column', justifyContent: 'center', width: '100px',
   },
   mapContainer: {
-    height: '85vh', width: '1250px', top: '40px', position: 'relative'
+    height: '91vh', width: '1250px', top: '40px', position: 'relative', left:'0px', bottom:'0px', right:'0px'
   },
   markerContainer: {
     position: 'absolute', transform: 'translate(-50%, -50%)', zIndex: 1, '&:hover': { zIndex: 2 },

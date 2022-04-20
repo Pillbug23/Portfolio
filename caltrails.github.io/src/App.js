@@ -1,7 +1,7 @@
 import React from 'react';
 import Navbar from './Components/Navbar/Navbar';
 import YoutubeBackground from 'react-youtube-background'
-import {BrowserRouter as Router,Link,Switch,Route, Routes,Outlet,Navigate,NavLink,useNavigate} from 'react-router-dom';
+import {BrowserRouter as Router,Link,Route, Routes,Outlet} from 'react-router-dom';
 import Signup from './Components/Navbar/Signup';
 import Browser from './Components/Trail/Browser';
 import Saved from './Components/Navbar/Saved';

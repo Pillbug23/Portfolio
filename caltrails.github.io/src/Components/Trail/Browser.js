@@ -7,10 +7,13 @@ import List from './List/List';
 import Map from './Map/Map';
 
 function Browser() {
+    const [radius,setRadius] = useState(5)
     const [places,setPlaces] = useState([]);
     const [weatherData,setWeatherData] = useState([]);
     const [childClicked, setChildClicked] = useState(null);
     const [coordinates,setCoordinates] = useState({});
+    const [living,setLiving] = useState({});
+    const [zoom,setZoom] = useState(13);
 
     const [bounds,setBounds] = useState({});
 
@@ -19,20 +22,22 @@ function Browser() {
     useEffect(() => {
         navigator.geolocation.getCurrentPosition(({coords: {latitude, longitude}}) => {
             setCoordinates({lat: latitude,lng: longitude});
+            setLiving({lat: latitude,lng: longitude})
         })
     }, []);
 
     useEffect(() => {
         setIsLoading(true);
-        getWeatherData(coordinates.lat,coordinates.lng)
+        getWeatherData(coordinates)
         .then((data) => setWeatherData(data));
 
-        getPlacesData(bounds.sw,bounds.ne)
+
+        getPlacesData(coordinates,radius)
         .then((data) => {
             setPlaces(Object.values(data));
             setIsLoading(false);
         })
-    }, [coordinates,bounds])
+    }, [coordinates,bounds,radius])
 
     return (
         <>
@@ -43,6 +48,9 @@ function Browser() {
                     <List places = {places} 
                           childClicked={childClicked}
                           isLoading={isLoading}
+                          radius={radius}
+                          setRadius={setRadius}
+                          setZoom={setZoom}
                     />
                 </Grid>
                     <Map
@@ -52,6 +60,8 @@ function Browser() {
                         places={places}
                         setChildClicked={setChildClicked}
                         weatherData={weatherData}
+                        zoom={zoom}
+                        living={living}
                     />
                 </Grid>
         </>
