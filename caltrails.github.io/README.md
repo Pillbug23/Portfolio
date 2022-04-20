@@ -3,10 +3,18 @@
 
 A simple web application that allows users to search for hiking trails near their location made with React.js. Auth0 framework allows unique authentication of login and access to user profile information. This projects uses the Google Maps API, TrailAPI, and weatherAPI; extraction of hiking trail data based on user's location. User can favorite hikes and view saved trails. 
 
+To access backend open a git terminal and navigate to the server directory. 
+```
+cd server
+node server.js
+```
+
+You should be able to see information logged when you favorite hikes in the explore page and see login information from the signup page.
+
 # Technologies 
 
-* Frontend: Javascript frameworks(React)
-* Backend: Nodejs,MongoDB
+* Frontend: Javascript frameworks(React,MaterialUI)
+* Backend: Nodejs, MongoDB
 * [Google Maps API](https://www.npmjs.com/package/google-map-react)
 * [Trail/Weather API data](https://rapidapi.com/)
 * Axios
@@ -51,7 +59,7 @@ git clone https://github.com/Pillbug23/caltrails.github.io
 cd caltrails.github.io
 
 # Remove current origin repository
-git remove remove origin
+git remote rm origin
 ```
 
 Install dependencies
