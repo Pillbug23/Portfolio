@@ -36,3 +36,28 @@ java gitlet.Main commit [message]
 
 
 
+* git log
+
+```
+java gitlet.Main log
+```
+
+Starting at the current head commit(our current commit), displays information about each commit back to the earliest commit (the initial one we created when first intiailizing our version control system using init. Each commit contains its id, date of the commit (besides our initial commit which is “The (Unix) Epoch” time), and the commit message.
+
+<a href="https://imgbb.com/"><img src="https://i.ibb.co/BKL9v1h/log.jpg" alt="log" border="0"></a></br>
+
+
+```
+java gitlet.Main find [commit message]
+```
+
+Custom method, allows user to find out the ids of all commits that have the given commit message. Multiple commits will be printed out on separate lines. The given message must be in quotations, if no such commit exists an error message will be printed.
+
+For example, we added wug.txt for addition, then committed (see above images for reference), we should be able to see the sha-ID by searching up the specific commit message we entered, in this case I typed "added wug".
+
+<a href="https://imgbb.com/"><img src="https://i.ibb.co/SfyyNYd/find.jpg" alt="find" border="0"></a></br>
+
+
+
+
+
