@@ -14,5 +14,5 @@ cd Portfolio
 cd Gitlet
 
 # Remove current origin repository
-git remove remove origin
+git remove remote origin
 ```
