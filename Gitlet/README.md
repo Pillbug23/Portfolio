@@ -34,7 +34,8 @@ Adds a copy of the file to the staging area. If the file is already staged for a
 java gitlet.Main commit [message]
 ```
 
-
+Each commit contains specific metadata information (the message entered when making a commit, the date, 
+and references to parent commits, sha-ID. Each commit also contains references to blobs (saved contents of files, each being tracked in a different commit). A commit has the same file contents as its parents. Files that were staged for addition/removal (using git add or git rm) are those updates to the commit. The new commit becomes the "current" commit with a head pointer that points to it. The now previous commit is our current commits parent. The staging area is cleared.
 
 * git log
 
@@ -53,9 +54,27 @@ java gitlet.Main find [commit message]
 
 Custom method, allows user to find out the ids of all commits that have the given commit message. Multiple commits will be printed out on separate lines. The given message must be in quotations, if no such commit exists an error message will be printed.
 
-For example, we added wug.txt for addition, then committed (see above images for reference), we should be able to see the sha-ID by searching up the specific commit message we entered, in this case I typed "added wug".
+For example, we added wug.txt for addition, then committed (see above images for reference), we should be able to see the sha-ID by searching up the specific commit message we entered, in this case I typed "added wug". The id matches what we have committed earlier.
 
 <a href="https://imgbb.com/"><img src="https://i.ibb.co/SfyyNYd/find.jpg" alt="find" border="0"></a></br>
+
+
+* git rm
+
+```
+java gitlet.Main rm [file name]
+```
+
+Unstages a file as it was staged for addition. If the file is tracked (any files in the current commit), we stage for removal. 
+
+
+* git status
+
+```
+java gitlet.Main status
+```
+
+Displays what branches exist, in which our current branch we are at represented with an "*". Shows which files are staged for addition or removal.
 
 
 
