@@ -76,7 +76,45 @@ java gitlet.Main status
 
 Displays what branches exist, in which our current branch we are at represented with an "*". Shows which files are staged for addition or removal.
 
+Example below shows one branch(our current branch master initialized using init), and a file staged for removal (Our current commit reference to files).
 
+<a href="https://imgbb.com/"><img src="https://i.ibb.co/85bJMCk/status.jpg" alt="status" border="0"></a><br />
+
+
+* git checkout
+
+```
+1.) java gitlet.Main checkout -- [file name]
+2.) java gitlet.Main checkout [commit id] -- [file name]
+3.) java gitlet.Main checkout [branch name]
+```
+
+There are three possible use-cases for checkout. 
+
+1.) Takes the version of a file if it exists in our current commit and puts it in our working directory (our repository), and overwrities the version of the file of it is there.
+
+2.) The same as 1, but takes a commit id instead.
+
+3.) The same as 1, but with an additional effect that the given branch will be considered the new HEAD (or current branch). 
+
+
+* git branch
+
+```
+java gitlet.Main branch [branch name]
+```
+
+Creates a new branch with the desired name. Our new branch will have the added feature of pointing to our head commit (current commit), but does not automatically switch over to our newly created branch.
+
+Suppose we want to add new features to a given file. We create a new branch that points to the same commit our current branch does. We can switch to the new branch using java gitlet.Main checkout [new-branch], modify the files then add and commit again. Going back to our previous branch and modifying,adding, and comitting there will allow us this branch structure. Essentially we are given a new pointer, with one of them being the current pointer indicated by "*". Each time we modify and commit we actively add a new child commit to the active current commit, allowing us to have multiple children.
+
+* git rm-branch
+
+```
+java gitlet.Main rm-branch [branch name]
+```
+
+Deletes the branch with the specified name. Only deletes the pointer associated with the branch, commits created under branch remain.
 
 
 
