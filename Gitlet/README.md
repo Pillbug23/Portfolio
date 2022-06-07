@@ -1,6 +1,18 @@
 # Gitlet
 A custom version-control system similiar to git. Functionality includes intialziation of a version control system, adding and committing files, removing files, log information, checking out files, branching, and merging.
 
+Beginning with intialization, a version control system is created using init. I created a few example files with filler content and then added these files. Committed the added files and then created another branch called other. We are still in the master branch. Removed a file from our current commit and then pushed another commit.
+
+<a href="https://imgbb.com/"><img src="https://i.ibb.co/prqj0yk/first-merge.jpg" alt="first-merge" border="0"></a><br /><a target='_blank' href='https://poetandpoem.com/analysis-of-the-arrow-and-the-song-by-henry-wadsworth-longfellow'>which two lines in the poem indicate its theme</a><br />
+
+Navigating to the newly created branch, removed a file, added another, and then made another commit. Keep in mind the new branch still points to the same commit as the master branch did, so everything is the same, only after the commit is made does it begin to branch. Returning to the master branch, we merge the files from the given branch to the current one, in this case all the files from other merge with master.
+
+<a href="https://imgbb.com/"><img src="https://i.ibb.co/ssTyyXj/merge-2.jpg" alt="merge-2" border="0"></a>
+
+Now we can see the new commit indicating that we have merged.
+
+<a href="https://imgbb.com/"><img src="https://i.ibb.co/h8djQMn/last.jpg" alt="last" border="0"></a>
+
 # Methods
 * git init 
 
@@ -79,7 +91,7 @@ For example, we added wug.txt for addition, then committed (see above images for
 java gitlet.Main rm [file name]
 ```
 
-Unstages a file as it was staged for addition. If the file is tracked (any files in the current commit), we stage for removal. 
+Unstages a file as it was staged for addition. If the file is tracked (any files in the current commit), we stage for removal. If the file is in our current commit, we stage it for removal and remove it from the working directory.
 
 
 * git status
@@ -171,11 +183,21 @@ An example shows we have made 2 commits, the second with the message "added wug"
 <a href="https://imgbb.com/"><img src="https://i.ibb.co/DRR9WHf/just-log.jpg" alt="just-log" border="0"></a>
 <a href="https://imgbb.com/"><img src="https://i.ibb.co/t28pmK8/reset.jpg" alt="reset" border="0"></a>
 
+Note: global-log allows one to view all commit information made, even if we reset.
+
 * git merge
 
 ```
 java gitlet.Main merge [branch name]
 ```
 
+Allows us to merge files from the given branch, to the current branch. A split point is the latest common ancestor of both branches. This split point denotes a path of 0 or more commit pointers from both branch heads. It is essentially the latest commit made before commits where made between the new branch and the old one. A successful merge will be confirmed with the log message Merged [given branch name] into [current branch name]. Any staged files for addition for removal we be prompted to commit before merging. Any branch that does not exist will be met with an error message. Merging a branch with itself is met with an error message. Any untracked file overwritten or deleted by the merge is met with an error message.
 
+<a href="https://ibb.co/p67hzfN"><img src="https://i.ibb.co/0p7sMC1/split-point.png" alt="split-point" border="0"></a>
+
+# Technologies
+* java.util.Date - Allows retrieval of current time data.
+* java.text.SimpleDateFormat - Formatting date
+* java.io.File- creation of directories 
+* java.nio.charset.StandardCharsets - converts commit objects to obtain unique sha-ID of each commit object
 
