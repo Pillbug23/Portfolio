@@ -157,6 +157,12 @@ Say we wanted to get back to a previous version of our files found at commit #2.
 <a href="https://imgbb.com/"><img src="https://i.ibb.co/YZ7GjGS/reverted-head.png" alt="reverted-head" border="0"></a>
 
 
+
+An example shows we have made 2 commits, the second with the message "added wug", and the third with the commit message "new change in master branch". Say we wanted to revert back to our commit #2 with message "added wug", we would grab the commit sha-ID and use the method to revert back to the previous commit with its version of files.
+
+<a href="https://imgbb.com/"><img src="https://i.ibb.co/DRR9WHf/just-log.jpg" alt="just-log" border="0"></a>
+<a href="https://imgbb.com/"><img src="https://i.ibb.co/t28pmK8/reset.jpg" alt="reset" border="0"></a>
+
 * git merge
 
 ```
