@@ -49,6 +49,17 @@ Starting at the current head commit(our current commit), displays information ab
 
 
 ```
+java gitlet.Main global-log
+```
+
+Similiar to log, except it displays all commit information about every single commit. This includes commits in other branches, unlike log (only displays commits in the current branch). Even if the branch (a pointer) is deleted, the commits will remain, so we are still able to access info about the commits, just unable to modify the contents (blobs) of those commits. Below is the difference, as one shows just the master branch commits, the other showing commits I made in both the master branch and another branch I created.
+
+<a href="https://imgbb.com/"><img src="https://i.ibb.co/c3fgrjn/global-log.jpg" alt="global-log" border="0"></a>
+
+<a href="https://imgbb.com/"><img src="https://i.ibb.co/DRR9WHf/just-log.jpg" alt="just-log" border="0"></a>
+
+
+```
 java gitlet.Main find [commit message]
 ```
 
@@ -132,5 +143,18 @@ java gitlet.Main reset [commit id]
 ```
 
 Checks out all the files tracked by the given commit, removes tracked files not present in that commit, and shifts our current branch HEAD back to that commit with the given id. 
+
+Say we wanted to get back to a previous version of our files found at commit #2. reset allows to revert back to an earlier version found at a previous commit.
+
+<a href="https://imgbb.com/"><img src="https://i.ibb.co/m6bW38K/simple-head.png" alt="simple-head" border="0"></a>
+<a href="https://imgbb.com/"><img src="https://i.ibb.co/YZ7GjGS/reverted-head.png" alt="reverted-head" border="0"></a>
+
+
+* git merge
+
+```
+java gitlet.Main merge [branch name]
+```
+
 
 
