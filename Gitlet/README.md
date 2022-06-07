@@ -106,7 +106,13 @@ java gitlet.Main branch [branch name]
 
 Creates a new branch with the desired name. Our new branch will have the added feature of pointing to our head commit (current commit), but does not automatically switch over to our newly created branch.
 
-Suppose we want to add new features to a given file. We create a new branch that points to the same commit our current branch does. We can switch to the new branch using java gitlet.Main checkout [new-branch], modify the files then add and commit again. Going back to our previous branch and modifying,adding, and comitting there will allow us this branch structure. Essentially we are given a new pointer, with one of them being the current pointer indicated by "*". Each time we modify and commit we actively add a new child commit to the active current commit, allowing us to have multiple children.
+Suppose we want to add new features to a given file. We create a new branch that points to the same commit our current branch does. We can switch to the new branch using java gitlet.Main checkout [new-branch], modify the files then add and commit again. Going back to our previous branch and modifying,adding, and comitting there will allow us this branch structure. Essentially we are given a new pointer, with one of them being the current pointer indicated by "*". Each time we modify and commit we actively add a new child commit to the active current commit, allowing us to have multiple children. Below shows a visual example:
+
+<a href="https://ibb.co/fnfj5Xx"><img src="https://i.ibb.co/JyVD4cs/branched.png" alt="branched" border="0"></a>
+<a href="https://ibb.co/09DfvmZ"><img src="https://i.ibb.co/6tn4Lrb/checkout-master.png" alt="checkout-master" border="0"></a>
+<a href="https://ibb.co/yWPsHgz"><img src="https://i.ibb.co/86s81Py/commit-on-branch.png" alt="commit-on-branch" border="0"></a>
+<a href="https://imgbb.com/"><img src="https://i.ibb.co/Ct7TYmr/just-switched-branch.png" alt="just-switched-branch" border="0"></a>
+<a href="https://imgbb.com/"><img src="https://i.ibb.co/XDRh1Km/just-called-branch.png" alt="just-called-branch" border="0"></a>
 
 * git rm-branch
 
@@ -114,7 +120,17 @@ Suppose we want to add new features to a given file. We create a new branch that
 java gitlet.Main rm-branch [branch name]
 ```
 
-Deletes the branch with the specified name. Only deletes the pointer associated with the branch, commits created under branch remain.
+Deletes the branch with the specified name. Only deletes the pointer associated with the branch, commits created under branch remain. Allows us to delete pointers to branching paths, in turn making it impossible to reach the commits we would have created in our new branched path.
 
+<a href="https://ibb.co/gVnhH1Y"><img src="https://i.ibb.co/8chtT3k/removed.jpg" alt="removed" border="0"></a>
+
+
+* git reset
+
+```
+java gitlet.Main reset [commit id]
+```
+
+Checks out all the files tracked by the given commit, removes tracked files not present in that commit, and shifts our current branch HEAD back to that commit with the given id. 
 
 
