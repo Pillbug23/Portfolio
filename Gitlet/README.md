@@ -27,6 +27,7 @@ java gitlet.Main add [file name]
 
 Adds a copy of the file to the staging area. If the file is already staged for addition, it overwrites the previous entry with the new contents. 
 
+Just like in regular git, if we wanted to add a file, we would add the name of the file in the current directory we were at, and a copy of that file is staged for addition, essentially meaning its placed in a shopping cart thats ready for checkout when we are done shopping and ready to purchase at the checkout line. 
 
 * git commit
 
@@ -36,6 +37,8 @@ java gitlet.Main commit [message]
 
 Each commit contains specific metadata information (the message entered when making a commit, the date, 
 and references to parent commits, sha-ID. Each commit also contains references to blobs (saved contents of files, each being tracked in a different commit). A commit has the same file contents as its parents. Files that were staged for addition/removal (using git add or git rm) are those updates to the commit. The new commit becomes the "current" commit with a head pointer that points to it. The now previous commit is our current commits parent. The staging area is cleared.
+
+<a href="https://imgbb.com/"><img src="https://i.ibb.co/8KNhZkb/add-commit.jpg" alt="add-commit" border="0"></a>
 
 * git log
 
@@ -104,10 +107,15 @@ There are three possible use-cases for checkout.
 
 1.) Takes the version of a file if it exists in our current commit and puts it in our working directory (our repository), and overwrities the version of the file of it is there.
 
-2.) The same as 1, but takes a commit id instead.
+2.) The same as 1, but takes a commit id instead. Checks if the file exists within the given commit id, and then overwrites the given version of the file with the contents of the commit file.
 
 3.) The same as 1, but with an additional effect that the given branch will be considered the new HEAD (or current branch). 
 
+Essentially with method 1, we overwrite the contents of the file in our current directory with the contents of our current commit. Method 2 is the same but we specific a commit sha-ID, which checks if a file exists in that given commit which overwrites the working directory contents. Below is an example showcasing a test file I modified in the current directory, using method 1 to overwrite what I have written with the file contents in the head commit.
+
+<a href="https://imgbb.com/"><img src="https://i.ibb.co/vzghGfJ/before.jpg" alt="before" border="0"></a><br />
+<a href="https://imgbb.com/"><img src="https://i.ibb.co/JjCZdDW/checkout-1.jpg" alt="checkout-1" border="0"></a>
+<a href="https://imgbb.com/"><img src="https://i.ibb.co/LkHsrqn/after.jpg" alt="after" border="0"></a>
 
 * git branch
 
