@@ -31,19 +31,6 @@ Once our world is generated, the user is able to move around using the WASD keys
 * TETile.java - used to identify the type of tile
 * TERenderer.java - used to render tiles
 
-# Get Started
-
-```
-# Clone this repository
-git clone Portfolio
-
-# Go into the repository
-cd Portfolio
-cd BYOW
-
-# Remove current origin repository
-git remove remove origin
-```
 
 
 
