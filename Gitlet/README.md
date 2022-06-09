@@ -20,7 +20,7 @@ Now we can see the new commit indicating that we have merged.
 java gitlet.Main init
 ```
 
-Creates a new version-control system in the current directory. It starts with with an initial commit, a single branch which points to the initial commit named "master". A stage directory is intialized here; think of it as a shopping cart holds items and empties it after it is checked out. Each commit is identified by its unique SHA-code, a 160-bit integer hash from any sequence of bytes; think of it as a unique code for each given commit. 
+Creates a new version-control system in the current directory. It starts with with an initial commit, a single branch which points to the initial commit named "master". A stage directory is intialized here; think of it as a shopping cart holds items and empties it after it is checked out. Each commit is identified by its unique SHA-1 hash value, a 40-character hexadecimal string, makes it convenient for storing data in the .gitlet directory. We can use this to compare two files(blobs) to see if they have the same content, in other words, if the SHA-1 is the same, we assume the files are the same.
 
 <a href="https://imgbb.com/"><img src="https://i.ibb.co/RCM5DY8/intiailziation.jpg" alt="intiailziation" border="0"></a><br />
 
@@ -124,7 +124,7 @@ There are three possible use-cases for checkout.
 
 3.) The same as 1, but with an additional effect that the given branch will be considered the new HEAD (or current branch). 
 
-Essentially with method 1, we overwrite the contents of the file in our current directory with the contents of our current commit. Method 2 is the same but we specific a commit sha-ID, which checks if a file exists in that given commit which overwrites the working directory contents. Below is an example showcasing a test file I modified in the current directory, using method 1 to overwrite what I have written with the file contents in the head commit.
+Essentially with method 1, we overwrite the contents of the file in our current directory with the contents of our current commit. Method 2 is the same but we specific a commit sha-ID, which checks if a file exists in that given commit which overwrites the working directory contents. Below is an example showcasing a test file I modified in the current directory, using method 1 to overwrite what I have written with the file contents in the head commit. In the first photo, I have modified my wug text file to include some additional text. After applying method 1, a version of that file in our current commit overwrites whatever content was present in my working directory (current directory).
 
 <a href="https://imgbb.com/"><img src="https://i.ibb.co/vzghGfJ/before.jpg" alt="before" border="0"></a><br />
 <a href="https://imgbb.com/"><img src="https://i.ibb.co/JjCZdDW/checkout-1.jpg" alt="checkout-1" border="0"></a><br />
@@ -199,6 +199,6 @@ Allows us to merge files from the given branch, to the current branch. A split p
 # Packages
 * java.util.Date - Allows retrieval of current time data.
 * java.text.SimpleDateFormat - Formatting date
-* java.io.File- creation of directories 
-* java.nio.charset.StandardCharsets - converts commit objects to obtain unique sha-ID of each commit object
+* java.io.File- creation of directories, checking files, path joining for files
+* Utils.class - collection of methods for creating sha ID, serialization (reading and writing internal objects from and to files), deleting files.
 
