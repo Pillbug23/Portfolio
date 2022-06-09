@@ -3,7 +3,7 @@ A custom version-control system similiar to git. Functionality includes intialzi
 
 Beginning with intialization, a version control system is created using init. I created a few example files with filler content and then added these files. Committed the added files and then created another branch called other. We are still in the master branch. Removed a file from our current commit and then pushed another commit.
 
-<a href="https://imgbb.com/"><img src="https://i.ibb.co/prqj0yk/first-merge.jpg" alt="first-merge" border="0"></a><br /><a target='_blank' href='https://poetandpoem.com/analysis-of-the-arrow-and-the-song-by-henry-wadsworth-longfellow'>which two lines in the poem indicate its theme</a><br />
+<a href="https://imgbb.com/"><img src="https://i.ibb.co/prqj0yk/first-merge.jpg" alt="first-merge" border="0"></a><br />
 
 Navigating to the newly created branch, removed a file, added another, and then made another commit. Keep in mind the new branch still points to the same commit as the master branch did, so everything is the same, only after the commit is made does it begin to branch. Returning to the master branch, we merge the files from the given branch to the current one, in this case all the files from other merge with master.
 
