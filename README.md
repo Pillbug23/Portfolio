@@ -1,6 +1,6 @@
 # Portfolio
 
-I’m a UC Berkeley graduate with a strong interest in frontend. I enjoy problem-solving and coding. I have worked on technologies like Python, SQL, MongoDB, HTML, CSS, Java during my bachelor's. I got into front end development because it was a form of programming that let me visualize my progress and results in a quicker and more literal way than other types of programming. React has been a personal favorite framework of mine for developing projects. I am passionate about developing applications centered around data visualization and constantly looking towards improving my skills and learning new libraries/frameworks. 
+Welcome to my GitHub portfolio! I am Phillip Ly, an aspiring Software Engineer with a passion for developing innovative solutions and interactive software to help benefit users. Here, you will find a collection of my projects that demonstrate my skills in various areas of software development.
 
-
-Please reach out to me at philly79@berkeley.edu for any questions or would like to talk (please email me for private repos)!
+About Me
+I am currently pursuing a Bachelors of Science in Computer Science at Oregon State University. After graduating with my first undergraduate degree, I realized that I wanted a more formal education in computer science to pursue roles and projects that interest me. My areas of interest include web development, frontend design, backend and database interactions, and web accessibility. Through my projects, I aim to solve real-world problems and continuously learn new technologies and methodologies.
